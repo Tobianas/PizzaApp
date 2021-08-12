@@ -2,10 +2,10 @@ package com.example.pizzaapp;
 
 public class PizzaClass {
 
-    private boolean redSauce,cheeseSauce,cheese, ham, mushroom;
+    private boolean redSauce, cheeseSauce, cheese, ham, mushroom;
     private int price;
 
-    public PizzaClass(boolean redSauce, boolean cheeseSauce, boolean cheese, boolean ham, boolean mushroom,int price) {
+    public PizzaClass(boolean redSauce, boolean cheeseSauce, boolean cheese, boolean ham, boolean mushroom, int price) {
         this.redSauce = redSauce;
         this.cheeseSauce = cheeseSauce;
         this.cheese = cheese;
