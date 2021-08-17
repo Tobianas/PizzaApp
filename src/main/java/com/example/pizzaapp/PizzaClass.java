@@ -21,7 +21,8 @@ public class PizzaClass {
             this.price = price;
             PreparedStatement posted = con.prepareStatement("INSERT INTO pizzas" +
                     "                                      (redSauce,cheeseSauce,cheese,ham,mushroom,price)" +
-                    "                                       VALUES ('" + redSauce + "','" + cheeseSauce + "','" + cheese + "','" + ham + "','" + mushroom + "','" + price + "')");
+                    "                                       VALUES ('" +  boolToInt(redSauce) + "','" + boolToInt(cheeseSauce) + "','" + boolToInt(cheese)
+                                                                        + "','" + boolToInt(ham) + "','" + boolToInt(mushroom) + "','" + price + "')");
             posted.executeUpdate();
         } catch (Exception e) {
             System.out.println(e);
@@ -42,5 +43,9 @@ public class PizzaClass {
                 ", mushroom=" + mushroom +
                 ", price=" + price + "€" +
                 '}';
+    }
+    private int boolToInt(boolean bool){
+        int val;
+        return val = (bool) ? 1 : 0;
     }
 }
